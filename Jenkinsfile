@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-              git branch: 'main', url: 'https://github.com/meghavathveeresh/yas.git'
+            git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/meghavathveeresh/yas.git'
             }
         }
           stage('Build') {
